@@ -8,16 +8,21 @@ metropol = "Copenhagen"
   console.log("I live in " + city + " and we love our neighbour city, which is " + metropol)
   console.log(`my hometown is ${city} and we love our neighbour city, which is ${metropol}`)
   // call the global variable which is outside the IIFE on the page
-  const text = document.querySelector(".myText")
-  text.append("My hometown is " + city)
 
   //create a customEvent triggered by button click
   const button = document.querySelector(".button")
 
-  const event = new CustomEvent("buttonChange", {
-    detail: {}
+  button.addEventListener("click", () => {
+    const event = new CustomEvent("buttonChange", {})
+    console.log(event)
+    document.dispatchEvent(event)
   })
-  document.dispatchEvent(event)
 
-  button.addEventListener("buttonChange", () => {})
+  document.addEventListener("buttonChange", () => {
+    const text = document.querySelector(".ourText")
+    text.append("My hometown is " + city)
+
+    const age = document.querySelector(".age")
+    age.append("my favoured city is " + metropol)
+  })
 })()
