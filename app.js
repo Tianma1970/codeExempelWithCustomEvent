@@ -31,11 +31,17 @@ metropol = "Copenhagen"
     capital.append("my favoured city is " + metropol)
   })
 
-  //eventListener for textarea
-  const button2 = document.querySelector(".button2")
-  button2.addEventListener("click", () => {
-    const textarea = document.querySelector("form")
+  //eventListener for showing textarea
+  const button3 = document.querySelector(".button3")
+  const textarea = document.querySelector("form")
+  button3.addEventListener("click", () => {
     //we want to show the textarea by remove class 'hidden'
     textarea.classList.remove("hidden")
+  })
+
+  //eventListener for hiding textarea
+  const button4 = document.querySelector(".button4")
+  button4.addEventListener("click", () => {
+    textarea.classList.add("hidden")
   })
 })()
