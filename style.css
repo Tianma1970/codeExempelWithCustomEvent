@@ -20,6 +20,17 @@
 }
 
 /**
+the button area
+**/
+.buttonArea {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  margin-top: 8px;
+}
+
+/**
 the textarea
 **/
 .writeText {
