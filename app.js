@@ -39,7 +39,8 @@ metropol = "Copenhagen"
 
   //eventListener for hiding textarea
   const noText = document.querySelector(".noText")
-  noText.addEventListener("click", () => {
+  noText.addEventListener("click", e => {
+    e.preventDefault()
     textarea.classList.add("writeText")
   })
 })()
