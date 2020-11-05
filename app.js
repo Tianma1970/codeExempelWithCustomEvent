@@ -10,12 +10,12 @@ metropol = "Copenhagen"
   // call the global variable which is outside the IIFE on the page
 
   //create a customEvents triggered by button click
-  const button1 = document.querySelector(".button1")
+  const surprised = document.querySelector(".surprised")
 
-  const button2 = document.querySelector(".button2")
-  button2.addEventListener("click", () => {})
+  const unsurprised = document.querySelector(".unsurprised")
+  unsurprised.addEventListener("click", () => {})
 
-  button1.addEventListener("click", () => {
+  surprised.addEventListener("click", () => {
     const event = new CustomEvent("buttonChange", {})
     console.log(event)
     document.dispatchEvent(event)
@@ -30,16 +30,16 @@ metropol = "Copenhagen"
   })
 
   //eventListener for showing textarea
-  const button3 = document.querySelector(".button3")
+  const text = document.querySelector(".text")
   const textarea = document.querySelector("form")
-  button3.addEventListener("click", () => {
-    //we want to show the textarea by remove class 'hidden'
-    textarea.classList.remove("hidden")
+  text.addEventListener("click", () => {
+    //we want to show the textarea by remove class 'writeText'
+    textarea.classList.remove("writeText")
   })
 
   //eventListener for hiding textarea
-  const button4 = document.querySelector(".button4")
-  button4.addEventListener("click", () => {
-    textarea.classList.add("hidden")
+  const noText = document.querySelector(".noText")
+  noText.addEventListener("click", () => {
+    textarea.classList.add("writeText")
   })
 })()
