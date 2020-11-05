@@ -35,6 +35,7 @@ metropol = "Copenhagen"
   const button2 = document.querySelector(".button2")
   button2.addEventListener("click", () => {
     const textarea = document.querySelector(".textarea")
-    console.log(textarea)
+    //we want to show the textarea by remove class 'hidden'
+    textarea.classList.remove("hidden")
   })
 })()
