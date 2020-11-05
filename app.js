@@ -29,18 +29,33 @@ metropol = "Copenhagen"
     capital.append("my favoured city is " + metropol)
   })
 
-  //eventListener for showing textarea
+  //eventListeners for showing textarea
   const text = document.querySelector(".text")
-  const textarea = document.querySelector("form")
-  text.addEventListener("click", () => {
-    //we want to show the textarea by remove class 'writeText'
-    textarea.classList.remove("writeText")
-  })
-
   //eventListener for hiding textarea
   const noText = document.querySelector(".noText")
+  //eventListeners for handling textarea
+  const showHideForm = document.querySelector("form")
+  const form = document.querySelector("form")
+  const textarea = document.querySelector("textarea")
+
+  text.addEventListener("click", () => {
+    //we want to show the showHideForm by remove class 'writeText'
+    showHideForm.classList.remove("writeText")
+  })
+
   noText.addEventListener("click", e => {
     e.preventDefault()
-    textarea.classList.add("writeText")
+    showHideForm.classList.add("writeText")
+  })
+
+  //customEvent with textarea
+  const textEvent = new CustomEvent("showWrittenText", {
+    bubbles: true,
+    detail: { text: () => textarea.value }
+  })
+  console.log(form)
+  form.addEventListener("showWrittenText", e => console.log(e.detail.text()))
+  textarea.addEventListener("input", e => {
+    e.target.dispatchEvent(textEvent)
   })
 })()
