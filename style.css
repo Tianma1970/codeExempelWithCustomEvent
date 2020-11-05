@@ -18,3 +18,10 @@
   width: 30vw;
   height: 20vh;
 }
+
+/**
+the textarea
+**/
+.hidden {
+  display: none;
+}
