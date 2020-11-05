@@ -2,3 +2,19 @@
   display: flex;
   justify-content: space-around;
 }
+
+.city {
+  display: flex;
+  border: solid black;
+  border-radius: 10px;
+  width: 30vw;
+  height: 50vh;
+}
+
+.hometown {
+  display: flex;
+  border: solid black;
+  border-radius: 10px;
+  width: 30vw;
+  height: 50vh;
+}
