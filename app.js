@@ -19,10 +19,10 @@ metropol = "Copenhagen"
   })
 
   document.addEventListener("buttonChange", () => {
-    const text = document.querySelector(".ourText")
+    const text = document.querySelector(".hometown")
     text.append("My hometown is " + city)
 
-    const age = document.querySelector(".age")
+    const age = document.querySelector(".city")
     age.append("my favoured city is " + metropol)
   })
 })()
