@@ -10,14 +10,12 @@ metropol = "Copenhagen"
   // call the global variable which is outside the IIFE on the page
 
   //create a customEvents triggered by button click
-  const button = document.querySelector(".button")
-
   const button1 = document.querySelector(".button1")
-  button1.addEventListener("click", () => {
-    location.reload()
-  })
 
-  button.addEventListener("click", () => {
+  const button2 = document.querySelector(".button2")
+  button2.addEventListener("click", () => {})
+
+  button1.addEventListener("click", () => {
     const event = new CustomEvent("buttonChange", {})
     console.log(event)
     document.dispatchEvent(event)
