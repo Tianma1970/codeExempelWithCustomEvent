@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-around;
 }
-
+/**
+styles for the two div classes
+**/
 .city {
   display: flex;
   border: solid black;
@@ -20,7 +22,6 @@
   width: 30vw;
   height: 20vh;
 }
-
 /**
 the button area
 **/
@@ -31,11 +32,9 @@ the button area
 button {
   margin-top: 8px;
 }
-
 /**
 the textarea
 **/
-
 textarea {
   margin-top: 8px;
 }
