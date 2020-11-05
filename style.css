@@ -6,6 +6,7 @@
 .city {
   display: flex;
   border: solid black;
+  background-color: grey;
   border-radius: 10px;
   width: 30vw;
   height: 20vh;
@@ -14,6 +15,7 @@
 .hometown {
   display: flex;
   border: solid black;
+  background-color: grey;
   border-radius: 10px;
   width: 30vw;
   height: 20vh;
@@ -33,6 +35,10 @@ button {
 /**
 the textarea
 **/
+
+textarea {
+  margin-top: 8px;
+}
 .writeText {
   display: none;
 }
