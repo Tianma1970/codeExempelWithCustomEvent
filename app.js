@@ -4,16 +4,18 @@ metropol = "Copenhagen"
 ;(function () {
   //querySelector for button
 
+  // call the global variable which is outside the IIFE on the page
   //two ways to call the global variable which is outside the IIFE (in console)
   console.log("I live in " + city + " and we love our neighbour city, which is " + metropol)
   console.log(`my hometown is ${city} and we love our neighbour city, which is ${metropol}`)
-  // call the global variable which is outside the IIFE on the page
 
   //create a customEvents triggered by button click
   const surprised = document.querySelector(".surprised")
 
   const unsurprised = document.querySelector(".unsurprised")
-  unsurprised.addEventListener("click", () => {})
+  unsurprised.addEventListener("click", () => {
+    location.reload()
+  })
 
   surprised.addEventListener("click", () => {
     const event = new CustomEvent("buttonChange", {})
@@ -53,9 +55,7 @@ metropol = "Copenhagen"
     bubbles: true,
     detail: { text: () => textarea.value }
   })
-  console.log(form)
+
   form.addEventListener("showWrittenText", e => console.log(e.detail.text()))
-  textarea.addEventListener("input", e => {
-    e.target.dispatchEvent(textEvent)
-  })
+  textarea.addEventListener("input", e => e.target.dispatchEvent(textEvent))
 })()
