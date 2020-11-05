@@ -30,4 +30,11 @@ metropol = "Copenhagen"
     const capital = document.querySelector(".capital")
     capital.append("my favoured city is " + metropol)
   })
+
+  //eventListener for textarea
+  const button2 = document.querySelector(".button2")
+  button2.addEventListener("click", () => {
+    const textarea = document.querySelector(".textarea")
+    console.log(textarea)
+  })
 })()
